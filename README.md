@@ -1,6 +1,8 @@
 # CrowdETH
 
-![logo](ethernum_logo.png)
+<p align="center">
+    <img src="ethernum_logo.png">
+</p>
 
 ## Motivation
 
