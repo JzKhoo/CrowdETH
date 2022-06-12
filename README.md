@@ -39,7 +39,7 @@ Crowdfunding will be a **more secure and transparent process** through the use o
 
 ## Documentations
 
-- [Figma Technical Proof of Concept](https://www.figma.com/file/uPUSzbwsr3ooL7ELvyhIEj/CrowdETH-Wireframing?node-id=500071%3A481)
+- [Figma Technical Proof of Concept](https://www.figma.com/proto/uPUSzbwsr3ooL7ELvyhIEj/CrowdETH-Wireframing?node-id=500073%3A404&scaling=scale-down&page-id=500073%3A267&starting-point-node-id=500073%3A404)
 
 ## Tech Stack
  <!-- markdownlint-disable MD033 -->
