@@ -1,6 +1,6 @@
-/*
 import React from 'react'
-import {Background, Description, Gif} from './HeroElements'
+import GifImage from '../../images/Logo.gif'
+import {Background, Description, StartButton, Gif} from './HeroElements'
 
 function Hero() {
   return (
@@ -9,9 +9,9 @@ function Hero() {
         <Description>
           <h1>The Platform for Secure Crowdfunding</h1>
           <p>Harness the unlimited potential of smart contracts and DeFi to invest in a business or start your new business venture.</p>
-          <button>Get Started</button>
+          <StartButton>Get Started</StartButton>
         </Description>
-        <Gif>
+        <Gif src={GifImage} alt='Gif'>
         </Gif>
       </Background>
     </>
@@ -19,4 +19,3 @@ function Hero() {
 }
 
 export default Hero
-*/
