@@ -10,6 +10,15 @@ export const Nav = styled.nav`
 
 export const NavLink = styled(Link)`
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+`
+
+export const NavLogo = styled.img`
+    width: 130px;
+    height: auto;
 `
 
 export const NavBtn = styled.nav`

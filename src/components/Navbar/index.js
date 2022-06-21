@@ -1,13 +1,13 @@
 import React from 'react'
 import Logo from '../../images/Logo1.png'
-import { Nav, NavLink, NavBtn, NavBtnLink1, NavBtnLink2 } from './NavbarElements'
+import { Nav, NavLink, NavLogo, NavBtn, NavBtnLink1, NavBtnLink2 } from './NavbarElements'
 
 const Navbar = () => {
   return (
     <>
       <Nav>
         <NavLink to='/'>
-          <img src={Logo} alt='Logo'/>
+          <NavLogo src={Logo} alt='Logo'></NavLogo>
         </NavLink>
         <NavBtn>
           <NavBtnLink1 to='/login'>Login</NavBtnLink1>
