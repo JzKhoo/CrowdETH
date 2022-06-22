@@ -11,7 +11,7 @@ function Signup() {
         <p>Join us in empowering ventures!</p>
         <Username placeholder='Username'></Username>
         <Password placeholder='Password'></Password>
-        <SignupButton to='/'>Venture Now!</SignupButton>
+        <SignupButton to='/Landing'>Venture Now!</SignupButton>
       </Background>
     </>
   )

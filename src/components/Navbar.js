@@ -8,8 +8,8 @@ function Navbar() {
       <NavBarContainer>
         <NavbarLogo src={Logo} alt='Logo'></NavbarLogo>
         <Buttons>
-          <LoginButton to='/login'>Login</LoginButton>
-          <SignUpButton to='/SignUp'>Sign Up</SignUpButton>
+          <LoginButton to='/Login'>Login</LoginButton>
+          <SignUpButton to='/Signup'>Sign Up</SignUpButton>
         </Buttons>        
       </NavBarContainer>
     </>

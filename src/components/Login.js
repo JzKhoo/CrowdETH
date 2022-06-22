@@ -11,7 +11,7 @@ function Login() {
         <p>Start your venture journey with us!</p>
         <Username placeholder='Username'></Username>
         <Password placeholder='Password'></Password>
-        <LoginButton to='/'>Venture In!</LoginButton>
+        <LoginButton to='/Landing'>Venture In!</LoginButton>
       </Background>
     </>
   )

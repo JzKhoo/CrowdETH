@@ -1,12 +1,10 @@
 import React from 'react'
-import Navbar2 from './Navbar2'
 import { Background, Description, ExploreButton, Gif } from './Explore.styles'
 import GifImage from '../images/Logo.gif'
 
 function Explore() {
   return (
     <>
-        <Navbar2 />
         <Background>
             <Description>
                 <h1>Explore & Look</h1>
