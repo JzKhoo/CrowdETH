@@ -13,9 +13,14 @@ export const NavBarContainer = styled.nav`
     padding: 0;
 `
 
+export const NavbarHome = styled(Link)`
+    text-decoration: none;
+`
+
 export const NavbarLogo = styled.img`
-    height: 70%;
-    width: auto;
+    display: block;
+    position: relative;
+    height: 50px;
     margin-left: 20px;
 `
 
