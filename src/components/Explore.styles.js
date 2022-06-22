@@ -7,7 +7,7 @@ export const Background = styled.div`
     width: 1915px;
     height: 900px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 `
 
@@ -16,7 +16,7 @@ export const Description = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-left: 150px;
+    margin-left: 120px;
     gap: 50px;
 
     h1 {

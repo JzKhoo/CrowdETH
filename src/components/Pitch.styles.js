@@ -7,7 +7,7 @@ export const Background = styled.div`
     width: 1915px;
     height: 900px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 `
 
@@ -16,8 +16,8 @@ export const Description = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-left: 150px;
     gap: 50px;
+    margin-left: 40px;
 
     h1 {
         font-size: 56px;
@@ -49,7 +49,7 @@ export const PitchButton = styled(Link)`
 
 export const Gif = styled.img`
     width: 30%;
-    height: 40%;
+    height: 30%;
     margin-right: 200px;
     opacity: 80%;
 `
