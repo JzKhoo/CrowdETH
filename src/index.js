@@ -6,6 +6,7 @@ import Login from './components/Login'
 import Signup from "./components/Signup";
 import Landing from "./components/Landing";
 import Projects from "./components/Projects";
+import SubmitPitch from "./components/SubmitPitch";
 
 const root = ReactDOM.createRoot(
     document.getElementById("root")
@@ -19,6 +20,7 @@ root.render(
             <Route path='Signup' element={<Signup />} />
             <Route path='Landing' element={<Landing />} />
             <Route path='Projects' element={<Projects />} />
+            <Route path='SubmitPitch' element={<SubmitPitch />} />
         </Routes>
     </BrowserRouter>
 )

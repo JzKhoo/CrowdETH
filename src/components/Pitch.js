@@ -10,7 +10,7 @@ function Pitch() {
                 <h1>Pitch It!</h1>
                 <p>Are you an Entrepreneur?</p>
                 <p>Showcase your brilliant ideas and win the hearts of the DeFi crowd!</p>
-                <PitchButton to='/'>Pitch Now</PitchButton>
+                <PitchButton to='/SubmitPitch'>Pitch Now</PitchButton>
             </Description>
             <Gif src={GifImage} alt='Gif'></Gif>
         </Background>
