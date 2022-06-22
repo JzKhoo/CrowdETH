@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from './App';
 import Login from './components/Login'
+import Signup from "./components/Signup";
 
 const root = ReactDOM.createRoot(
     document.getElementById("root")
@@ -13,6 +14,7 @@ root.render(
         <Routes>
             <Route path='/' element={<App />} />
             <Route path='Login' element={<Login />} />
+            <Route path='Signup' element={<Signup />} />
         </Routes>
     </BrowserRouter>
 )

@@ -1,20 +1,20 @@
 import React from 'react'
 import Navbar from './Navbar'
-import { Background, Password, Username, LoginButton } from './Login.styles'
+import { Background, Username, Password, SignupButton } from './Signup.styles'
 
-function Login() {
+function Signup() {
   return (
     <>
       <Navbar />
       <Background>
-        <h1>Login</h1>
-        <p>Start your venture journey with us!</p>
+        <h1>Sign Up</h1>
+        <p>Join us in empowering ventures!</p>
         <Username placeholder='Username'></Username>
         <Password placeholder='Password'></Password>
-        <LoginButton to='/'>Venture In!</LoginButton>
+        <SignupButton to='/'>Venture Now!</SignupButton>
       </Background>
     </>
   )
 }
 
-export default Login
+export default Signup
