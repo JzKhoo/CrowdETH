@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import BackgroundImage from '../images/Cosmic.jpeg'
 
 export const Container = styled.div`
@@ -37,12 +38,17 @@ export const ProjectDescription = styled.input`
     border: none;
 `
 
-export const SubmitButton = styled.button`
+export const SubmitButton = styled(Link)`
     background-color: #37C1FF;
     color: white;
     width: 200px;
     height: 60px;
     border-radius: 10px;
     font-size: 18px;
+    opacity: 80%;
     align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 `

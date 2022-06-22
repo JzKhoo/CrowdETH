@@ -12,7 +12,7 @@ function SubmitPitch() {
             <p>Start your IdeaETH by filling the template below!</p>
             <ProjectTitle placeholder='Project Title'></ProjectTitle>
             <ProjectDescription placeholder='Project Description'></ProjectDescription>
-            <SubmitButton>PITCH IT!</SubmitButton>
+            <SubmitButton to='/Landing'>PITCH IT!</SubmitButton>
         </Container>
     </>
   )
