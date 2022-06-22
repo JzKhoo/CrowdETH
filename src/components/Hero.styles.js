@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import BackgroundImage from '../images/Cosmic.jpeg'
 
 export const Background = styled.div`
@@ -30,15 +31,18 @@ export const Description = styled.div`
     }
 `
 
-export const StartButton = styled.button`
+export const StartButton = styled(Link)`
     background-color: #A7A7A7;
-    color: white;
-    font-size: 18px;
     width: 200px;
     height: 60px;
     border-radius: 10px;
     opacity: 80%;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
 `
 
 export const Gif = styled.img`
