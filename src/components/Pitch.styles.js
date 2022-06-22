@@ -4,10 +4,9 @@ import { Link } from "react-router-dom";
 
 export const Background = styled.div`
     background-image: url(${BackgroundImage});
-    width: 1915px;
-    height: 900px;
+    height: 910px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 `
 

@@ -3,8 +3,7 @@ import BackgroundImage from '../images/Cosmic.jpeg'
 
 export const Container = styled.div`
     background-image: url(${BackgroundImage});
-    width: 1915px;
-    height: 900px;
+    height: 910px;
     color: white;
     display: flex;
     flex-direction: column;
