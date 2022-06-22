@@ -10,7 +10,7 @@ function Navbar2() {
           <NavbarLogo src={Logo} alt='Logo'></NavbarLogo>
         </NavbarHome>
         <SearchBar placeholder='Search'></SearchBar>
-        <ProfileTab></ProfileTab>
+        <ProfileTab to='/'></ProfileTab>
       </NavBarContainer>
     </>
   )

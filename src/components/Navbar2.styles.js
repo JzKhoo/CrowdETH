@@ -30,7 +30,7 @@ export const SearchBar = styled.input`
     border-radius: 10px;
 `
 
-export const ProfileTab = styled.div`
+export const ProfileTab = styled(Link)`
     width: 50px;
     height: 50px;
     background-color: white;
