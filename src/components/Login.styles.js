@@ -36,7 +36,7 @@ export const Password = styled.input`
     height: 4%;
 `
 
-export const LoginButton = styled(Link)`
+export const LoginButton = styled.button`
     background-color: #A7A7A7;
     opacity: 90%;
     width: 10%;

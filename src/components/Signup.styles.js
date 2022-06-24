@@ -36,7 +36,7 @@ export const Password = styled.input`
     height: 4%;
 `
 
-export const SignupButton = styled(Link)`
+export const SignupButton = styled.button`
     background-color: #A7A7A7;
     opacity: 90%;
     width: 10%;
