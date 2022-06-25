@@ -37,6 +37,17 @@ export const ProjectDescription = styled.input`
     border: none;
 `
 
+export const UploadButton = styled.button`
+    align-self: center;
+    background-color: grey;
+    color: white;
+    opacity: 80%;
+    box-sizing: border-box;
+    width: 100px;
+    height: 40px;
+    border-radius: 4px;
+`
+
 export const SubmitButton = styled(Link)`
     background-color: #37C1FF;
     color: white;
