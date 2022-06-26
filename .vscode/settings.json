@@ -3,5 +3,10 @@
         "browserslist",
         "crowdeth",
         "hdwallet"
+    ],
+    "cSpell.ignoreWords": [
+        "Roboto",
+        "entreprenurs",
+        "funders"
     ]
 }

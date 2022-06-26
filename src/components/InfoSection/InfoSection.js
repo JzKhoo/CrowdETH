@@ -10,7 +10,7 @@ import { InfoSec,
   ImgWrapper,
   Img
  } from './InfoSection.styles'
-import { Container, Button } from '../globalStyles'
+import { Container, Button } from '../../globalStyles'
 
 const InfoSection = ({ 
   primary, 
