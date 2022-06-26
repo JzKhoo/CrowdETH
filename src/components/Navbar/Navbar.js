@@ -80,11 +80,11 @@ function Navbar() {
             </NavItemBtn>
             <NavItemBtn>
               {button ? (
-                <NavBtnLink to='/Signup'>
+                <NavBtnLink to='/Login'>
                   <Button primary>Sign Up</Button>
                 </NavBtnLink>
               ) : (
-                <NavBtnLink to='/Signup'>
+                <NavBtnLink to='/Login'>
                   <Button fontBig primary>
                     Sign Up
                   </Button>
