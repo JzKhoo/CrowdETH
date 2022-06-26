@@ -6,7 +6,7 @@ import {
   registerWithEmailAndPassword,
   signInWithGoogle,
 } from "../firebase";
-import Navbar from './Navbar'
+import Navbar from "./Navbar/Navbar";
 import { Background, Username, Password, SignupButton } from './Signup.styles'
 
 function Signup() {

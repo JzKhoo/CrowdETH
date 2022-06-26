@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {FaBars, FaTimes} from 'react-icons/fa'
 import { IconContext } from 'react-icons/lib'
-import { Button } from '../globalStyles'
+import { Button } from '../../globalStyles'
 import { Nav,
    NavBarContainer, 
    NavLogo, 
@@ -12,7 +12,7 @@ import { Nav,
    NavLinks,
    NavItemBtn,
    NavBtnLink,} from './Navbar.styles'
-import Logo from '../images/Logo1.png'
+import Logo from '../../images/Logo1.png'
 
 function Navbar() {
   const [click, setClick] = useState(false)
