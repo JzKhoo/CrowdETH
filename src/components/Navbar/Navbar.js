@@ -11,7 +11,7 @@ import { Nav,
    NavItem,
    NavLinks,
    NavItemBtn,
-   NavBtnLink,} from './Navbar.styles'
+   NavBtnLink} from './Navbar.styles'
 import Logo from '../../images/Logo1.png'
 
 function Navbar() {

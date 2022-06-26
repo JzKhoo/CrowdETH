@@ -1,14 +1,14 @@
 import React from 'react'
 import GlobalStyle from './globalStyles'
 import Navbar from './components/Navbar/Navbar'
-import Hero from './components/Hero'
+import Home from './pages/HomePage/Home'
 
 function App() {
   return (
     <>
       <GlobalStyle />
       <Navbar />
-      {/* <Hero /> */}
+      <Home />
     </>
   )
 }
