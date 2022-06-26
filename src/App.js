@@ -1,13 +1,14 @@
 import React from 'react'
+import GlobalStyle from './globalStyles'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import './App.css'
 
 function App() {
   return (
     <>
+      <GlobalStyle />
       <Navbar />
-      <Hero />
+      {/* <Hero /> */}
     </>
   )
 }

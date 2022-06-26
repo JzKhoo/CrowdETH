@@ -4,7 +4,7 @@ import BackgroundImage from '../images/Cosmic.jpeg'
 
 export const Background = styled.div`
     background-image: url(${BackgroundImage});
-    height: 910px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
