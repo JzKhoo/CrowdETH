@@ -2,11 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from './App';
-import Login from './components/Login'
-import Signup from "./components/Signup";
-import Landing from "./components/Landing";
-import Projects from "./components/Projects";
-import SubmitPitch from "./components/SubmitPitch";
+import Explore from "./pages/Explore/Explore";
+import HowItWorks from "./pages/HowItWorks/HowItWorks";
 
 const root = ReactDOM.createRoot(
     document.getElementById("root")
@@ -16,11 +13,8 @@ root.render(
     <BrowserRouter>
         <Routes>
             <Route path='/' element={<App />} />
-            <Route path='Login' element={<Login />} />
-            <Route path='Signup' element={<Signup />} />
-            <Route path='Landing' element={<Landing />} />
-            <Route path='Projects' element={<Projects />} />
-            <Route path='SubmitPitch' element={<SubmitPitch />} />
+            <Route path='Explore' element={<Explore />} />
+            <Route path='HowItWorks' element={<HowItWorks />} />
         </Routes>
     </BrowserRouter>
 )
