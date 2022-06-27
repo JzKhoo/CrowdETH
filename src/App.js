@@ -5,14 +5,22 @@ import Home from './pages/HomePage/Home'
 import ScrollToTop from './ScrollToTop'
 
 const express = require('express')
-const path = require('path');
+const serveStatic = require('serve-static')
+const path = require('path')
 
 const app = express()
-const port = process.env.PORT || 8080 // Heroku will need the PORT environment variable
 
-app.use(express.static(path.join(__dirname, 'build')));
+//here we are configuring dist to serve app files
+app.use('/', serveStatic(path.join(__dirname, '/dist')))
 
-app.listen(port, () => console.log(`App is live on port ${port}!`))
+// this * route is to serve project on different page routes except root /
+app.get(/.*/, function (req, res) {
+ res.sendFile(path.join(__dirname, '/dist/index.html'))
+})
+
+const port = process.env.PORT || 8080
+app.listen(port)
+console.log(`app is listening on port: ${port}`)
 
 function App() {
   return (
