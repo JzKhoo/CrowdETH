@@ -6,7 +6,7 @@ import Explore from "./pages/Explore/Explore";
 import HowItWorks from "./pages/HowItWorks/HowItWorks";
 import Login from './pages/Login/Login'
 import SignUp from "./pages/SignUp/SignUp";
-import Landing from './components/Landing'
+import Landing from "./pages/Landing/Landing";
 
 const root = ReactDOM.createRoot(
     document.getElementById("root")
