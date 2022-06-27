@@ -1,8 +1,6 @@
 import styled from "styled-components";
-import BackgroundImage from '../images/Cosmic.jpeg'
 
 export const Container = styled.div`
-    background-image: url(${BackgroundImage});
     height: 910px;
     color: white;
     display: flex;

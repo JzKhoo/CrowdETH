@@ -11,7 +11,8 @@ export const homeObjOne = {
     topLine: 'A BIG business starts small', 
     img: require('../../images/Logo.gif'),
     alt: 'Image',
-    start: ''
+    start: '',
+    link: '/Explore'
 }
 
 export const homeObjTwo = {
@@ -27,5 +28,6 @@ export const homeObjTwo = {
     topLine: 'Are you an Entrepreneur?', 
     img: require('../../images/Pitch.png'),
     alt: 'Image',
-    start: 'true'
+    start: 'true',
+    link: '/Pitch'
 }

@@ -91,17 +91,12 @@ function Navbar2() {
 
           <NavMenu onClick={handleClick} click={click}>
             <NavItem>
-              <NavLinks to='/Landing'>
-                Main
-              </NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to='/Landing'>
+              <NavLinks to='/Explore'>
                 Explore
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='/Landing'>
+              <NavLinks to='/Pitch'>
                 Pitch
               </NavLinks>
             </NavItem>

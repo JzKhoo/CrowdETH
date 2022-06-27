@@ -51,17 +51,12 @@ function Navbar() {
           <NavMenu onClick={handleClick} click={click}>
             <NavItem>
               <NavLinks to='/'>
-                Home
+                About Us
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='/Explore'>
-                Explore
-              </NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to='/HowItWorks'>
-                How It Works
+              <NavLinks to='/'>
+                Our Features
               </NavLinks>
             </NavItem>
 
