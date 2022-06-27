@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import BackgroundImage from '../images/Cosmic.jpeg'
 import { Link } from "react-router-dom"; 
 
 export const Background = styled.div`
-    background-image: url(${BackgroundImage});
+
     height: 910px;
     display: flex;
     justify-content: center;

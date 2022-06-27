@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export const LoginWrapper = styled.div`
+export const SignUpWrapper = styled.div`
     color: white;
     padding: 160px 0;
     background: #101522;
 `
 
-export const LoginColumn = styled.div`
+export const SignUpColumn = styled.div`
     margin-bottom: 15px;
     padding-right: 15px;
     padding-left: 15px;

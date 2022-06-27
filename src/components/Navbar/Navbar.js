@@ -55,12 +55,12 @@ function Navbar() {
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='/explore'>
+              <NavLinks to='/Explore'>
                 Explore
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='/howitworks'>
+              <NavLinks to='/HowItWorks'>
                 How It Works
               </NavLinks>
             </NavItem>
@@ -80,11 +80,11 @@ function Navbar() {
             </NavItemBtn>
             <NavItemBtn>
               {button ? (
-                <NavBtnLink to='/Login'>
+                <NavBtnLink to='/SignUp'>
                   <Button primary>Sign Up</Button>
                 </NavBtnLink>
               ) : (
-                <NavBtnLink to='/Login'>
+                <NavBtnLink to='/SignUp'>
                   <Button fontBig primary>
                     Sign Up
                   </Button>

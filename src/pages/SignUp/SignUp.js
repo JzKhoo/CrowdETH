@@ -1,52 +1,58 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { auth, logInWithEmailAndPassword, signInWithGoogle } from "../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { Link, useNavigate } from "react-router-dom";
+import {
+  auth,
+  registerWithEmailAndPassword,
+  signInWithGoogle,
+} from "../../firebase";
 
 import GlobalStyle from "../../globalStyles";
 import Navbar from '../../components/Navbar/Navbar'
 import { Container, Button } from "../../globalStyles";
-import { LoginWrapper,
-  LoginColumn,
+import { SignUpWrapper,
+  SignUpColumn,
   Heading,
   Subtitle,
   Form,
   FormInput
-} from "./Login.styles";
+} from "./SignUp.styles";
 
-const Login = () => {
+function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
   const [user, loading, error] = useAuthState(auth);
   const navigate = useNavigate();
 
+  const register = () => {
+    registerWithEmailAndPassword(name, email, password);
+  };
+
   useEffect(() => {
-    if (loading) {
-      // maybe trigger a loading screen
-      return;
-    }
-    if (user) navigate("/Landing");
-  }, [user, loading]);
+    if (loading) return;
+    if (user) navigate("/Login");
+  }, [user, loading]); 
 
   return (
     <>
       <GlobalStyle />
       <Navbar />
-      <LoginWrapper>
+      <SignUpWrapper>
         <Container>
-          <LoginColumn>
-            <Heading>Login</Heading>
-            <Subtitle>Start your venture journey with us!</Subtitle>
+          <SignUpColumn>
+            <Heading>Sign Up</Heading>
+            <Subtitle>Join up in empowering ventures!</Subtitle>
             <Form>
               <FormInput value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Username' />
               <FormInput value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Password' />
-              <Button onClick={() => logInWithEmailAndPassword(email, password)}>Venture In!</Button>
+              <Button onClick={register}>Venture Now!</Button>
             </Form>
-          </LoginColumn>
+          </SignUpColumn>
         </Container>
-      </LoginWrapper>
-    </> 
+      </SignUpWrapper>
+    </>
   )
 }
 
-export default Login
+export default SignUp;
