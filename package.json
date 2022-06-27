@@ -2,6 +2,9 @@
   "name": "crowdeth",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "16.15.0"
+  },
   "dependencies": {
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
@@ -13,6 +16,7 @@
     "@web3-react/injected-connector": "^6.0.7",
     "ethers": "^5.6.9",
     "firebase": "^9.8.4",
+    "heroku": "^7.60.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-firebase-hooks": "^5.0.3",
