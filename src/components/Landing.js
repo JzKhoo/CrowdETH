@@ -1,14 +1,12 @@
 import React from 'react'
-import Navbar2 from './Navbar2'
-import Explore from './Explore'
-import Pitch from './Pitch'
+import GlobalStyle from '../globalStyles'
+import Navbar2 from './Navbar2/Navbar2'
 
 function Landing() {
   return (
     <>
+        <GlobalStyle />
         <Navbar2 />
-        <Explore />
-        <Pitch />
     </>
   )
 }
