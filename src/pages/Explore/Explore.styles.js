@@ -1,18 +1,11 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-    height: 910px;
+export const ExploreWrapper = styled.div`
     color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-
-    h1 {
-        margin: 50px 0px 50px 100px;
-        font-size: 40px;
-    }
+    padding: 160px 0;
+    background: #101522;
 `
+
 export const MainSection = styled.div`
     display: flex;
     justify-content: center;
