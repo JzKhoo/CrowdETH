@@ -14,7 +14,32 @@ import { LoginWrapper,
   FormInput
 } from "./Login.styles";
 
+import IconButton from "@material-ui/core/IconButton";
+import InputLabel from "@material-ui/core/InputLabel";
+import Visibility from "@material-ui/icons/Visibility";
+import InputAdornment from "@material-ui/core/InputAdornment";
+import VisibilityOff from "@material-ui/icons/VisibilityOff";
+import Input from "@material-ui/core/Input";
+
 const Login = () => {
+
+  const [values, setValues] = React.useState({
+    password: "",
+    showPassword: false,
+  });
+  
+  const handleClickShowPassword = () => {
+    setValues({ ...values, showPassword: !values.showPassword });
+  };
+  
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
+  
+  const handlePasswordChange = (prop) => (event) => {
+    setValues({ ...values, [prop]: event.target.value });
+  };
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [user, loading, error] = useAuthState(auth);
@@ -39,7 +64,21 @@ const Login = () => {
             <Subtitle>Start your venture journey with us!</Subtitle>
             <Form>
               <FormInput value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Username' />
-              <FormInput value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Password' />
+              <FormInput 
+                type={values.showPassword ? "text" : "password"} 
+                value={password} onChange={(e) => setPassword(e.target.value)} 
+                placeholder='Password'
+                endAdornment={
+                  <InputAdornment position="end">
+                    <IconButton
+                      onClick={handleClickShowPassword}
+                      onMouseDown={handleMouseDownPassword}
+                    >
+                      {values.showPassword ? <Visibility /> : <VisibilityOff />}
+                    </IconButton>
+                  </InputAdornment>
+                  }
+                />
               <Button onClick={() => logInWithEmailAndPassword(email, password)}>Venture In!</Button>
             </Form>
           </LoginColumn>
