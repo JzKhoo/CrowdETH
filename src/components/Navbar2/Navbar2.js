@@ -17,8 +17,11 @@ import { Nav,
    NavBtnLink
 } from "./Navbar2.styles";
 import Logo from '../../images/Logo1.png'
+import ConnectWallet from "../Wallet/ConnectWallet";
 
 function Navbar2() {
+
+  const navigate = useNavigate();
 
   const [click, setClick] = useState(false)
   const [button, setButton] = useState(true)
@@ -35,46 +38,10 @@ function Navbar2() {
   }
 
   useEffect(() => {
-    showButton()
+    showButton();
   }, [])
 
-  window.addEventListener('resize', showButton)
-
-
-  const initialText = 'Connect Wallet';
-  const [buttonText, setButtonText] = useState(initialText);
-  const [walletAddress, setWalletAddress] = useState("")
-  const navigate = useNavigate();
-
-  const truncateAddress = (str) => {
-    if (`${str}`.length == 42) {
-      return `0x${str.substring(2, 6)}...${str.substring(38)}`;
-    }
-  };
-
-  async function requestAccount() {
-    // Check if Meta Mask extension exists
-    if (window.ethereum) {
-      try {
-        const accounts = await window.ethereum.request({
-          method: "eth_requestAccounts",
-        });
-        setWalletAddress(accounts[0]);
-      } catch (error) {
-        alert('Error Connnecting...');
-      }
-    } else {
-      alert('Meta Mask extension not detected');
-    }
-  }
-
-  function connectWallet() {
-    if (typeof window.ethereum !== "undefined") {
-      requestAccount();
-      const status = truncateAddress(walletAddress);
-      setButtonText("Connected to: " + status);
-    }
-  }
+  window.addEventListener('resize', showButton);
 
   return (
     <>
@@ -100,20 +67,7 @@ function Navbar2() {
                 Pitch
               </NavLinks>
             </NavItem>
-
-            <NavItemBtn>
-              {button ? (
-                <NavBtnLink>
-                  <Button primary onClick={connectWallet}>Connect Wallet</Button>
-                </NavBtnLink>
-              ) : (
-                <NavBtnLink>
-                  <Button fontBig primary onClick={connectWallet}>
-                    Connect Wallet
-                  </Button>
-                </NavBtnLink>
-              )}
-            </NavItemBtn>
+            <ConnectWallet />
             <NavItemBtn>
               {button ? (
                 <NavBtnLink>
