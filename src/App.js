@@ -1,13 +1,16 @@
 import React from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import './App.css'
+import GlobalStyle from './globalStyles'
+import Navbar from './components/Navbar/Navbar'
+import Home from './pages/HomePage/Home'
+import ScrollToTop from './ScrollToTop'
 
 function App() {
   return (
     <>
+      <GlobalStyle />
+      <ScrollToTop />
       <Navbar />
-      <Hero />
+      <Home />
     </>
   )
 }
