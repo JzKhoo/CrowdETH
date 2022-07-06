@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { IconContext } from 'react-icons/lib'
+import { animateScroll as scroll } from 'react-scroll'
 import { Button } from '../../globalStyles'
 import { Nav,
    NavBarContainer, 
@@ -19,7 +20,6 @@ function Navbar() {
   const [button, setButton] = useState(true)
 
   const handleClick = () => setClick(!click)
-  const closeMobileMenu = () => setClick(false)
 
   const showButton = () => {
     if (window.innerWidth <= 960) {
@@ -35,12 +35,16 @@ function Navbar() {
 
   window.addEventListener('resize', showButton)
 
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  }
+
   return (
     <>
     <IconContext.Provider value={{color: '#fff'}}>
       <Nav>
         <NavBarContainer>
-          <NavLogo to='/' onClick={closeMobileMenu}>
+          <NavLogo to='/' onClick={toggleHome}>
             <NavIcon src={Logo} />
           </NavLogo>
 
@@ -50,17 +54,17 @@ function Navbar() {
 
           <NavMenu onClick={handleClick} click={click}>
             <NavItem>
-              <NavLinks to='/'>
+              <NavLinks to='GetStarted' smooth={true} duration={500} spy={true} exact='true' offset={-80}>
                 Get Started
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='/'>
+              <NavLinks to='AboutUs' smooth={true} duration={500} spy={true} exact='true' offset={-80}>
                 About Us
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='/'>
+              <NavLinks to='OurFeatures' smooth={true} duration={500} spy={true} exact='true' offset={-80}>
                 Our Features
               </NavLinks>
             </NavItem>

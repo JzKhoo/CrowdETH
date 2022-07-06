@@ -14,6 +14,7 @@ import { Container, Button } from '../../globalStyles'
 
 const InfoSection = ({ 
   primary, 
+  id,
   lightBg, 
   imgStart, 
   lightTopLine, 
@@ -30,7 +31,7 @@ const InfoSection = ({
 }) => {
   return (
     <>
-      <InfoSec lightBg={lightBg}>
+      <InfoSec lightBg={lightBg} id={id}>
         <Container>
           <InfoRow imgStart={imgStart}>
             <InfoColumn>
@@ -38,11 +39,9 @@ const InfoSection = ({
                 <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
-                <Link to={link}>
-                  <Button big fontBig primary={primary}>
-                    {buttonLabel}
-                  </Button>
-                </Link>
+                <Button to={link} big fontBig primary={primary} smooth={true} duration={500} spy={true} exact='true' offset={-80}>
+                  {buttonLabel}
+                </Button>
               </TextWrapper>
             </InfoColumn>
             <InfoColumn>

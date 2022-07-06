@@ -1,4 +1,5 @@
 export const homeObjOne = {
+    id: 'GetStarted',
     lightBg: false,
     primary: true,
     imgStart: '', 
@@ -16,6 +17,7 @@ export const homeObjOne = {
 }
 
 export const homeObjTwo = {
+    id: 'AboutUs',
     lightBg: true,
     primary: false,
     imgStart: 'start', 
@@ -33,6 +35,7 @@ export const homeObjTwo = {
 }
 
 export const homeObjThree = {
+    id: 'OurFeatures',
     lightBg: false,
     primary: true,
     imgStart: '', 
