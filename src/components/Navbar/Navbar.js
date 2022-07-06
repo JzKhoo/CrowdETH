@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {FaBars, FaTimes} from 'react-icons/fa'
+import { FaBars, FaTimes } from 'react-icons/fa'
 import { IconContext } from 'react-icons/lib'
 import { Button } from '../../globalStyles'
 import { Nav,
@@ -51,6 +51,11 @@ function Navbar() {
           <NavMenu onClick={handleClick} click={click}>
             <NavItem>
               <NavLinks to='/'>
+                Get Started
+              </NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to='/'>
                 About Us
               </NavLinks>
             </NavItem>
@@ -69,19 +74,6 @@ function Navbar() {
                 <NavBtnLink to='/Login'>
                   <Button fontBig primary>
                     Login
-                  </Button>
-                </NavBtnLink>
-              )}
-            </NavItemBtn>
-            <NavItemBtn>
-              {button ? (
-                <NavBtnLink to='/SignUp'>
-                  <Button primary>Sign Up</Button>
-                </NavBtnLink>
-              ) : (
-                <NavBtnLink to='/SignUp'>
-                  <Button fontBig primary>
-                    Sign Up
                   </Button>
                 </NavBtnLink>
               )}

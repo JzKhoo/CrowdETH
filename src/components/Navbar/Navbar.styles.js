@@ -4,11 +4,11 @@ import { Link } from "react-router-dom"
 
 export const Nav = styled.nav`
     background: #30362F;
-    height: 64px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 1.2rem;
     position: sticky;
     top: 0;
     z-index: 999;
@@ -17,7 +17,7 @@ export const Nav = styled.nav`
 export const NavBarContainer = styled(Container)`
     display: flex;
     justify-content: space-between;
-    height: 64px;
+    height: 80px;
 
     ${Container}
 `
@@ -62,7 +62,7 @@ export const NavMenu = styled.ul`
         width: 100%;
         height: 90vh;
         position: absolute;
-        top: 64px;
+        top: 80px;
         left: ${({click}) => (click ? 0 : '-100%')};
         opacity: 1;
         transition: all 0.5s ease;
@@ -71,11 +71,11 @@ export const NavMenu = styled.ul`
 `
 
 export const NavItem = styled.li`
-    height: 64px;
+    height: 80px;
     border-bottom: 2px solid transparent;
 
     &:hover {
-        border-bottom: 2px solid white;
+        border-bottom: 2px solid #4b59f7;
     }
 
     @media screen and (max-width: 960px) {
@@ -113,8 +113,8 @@ export const NavItemBtn = styled.li`
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 20%;
-        height: 90px;
+        width: 100%;
+        height: 120px;
     }
 `
 
