@@ -112,6 +112,10 @@ export const NavLinks = styled(LinkS)`
             color: #4b59f7;
             transition: all 0.3s ease;
         }
+
+        &.active {
+            border-bottom: none;
+        }
     }
 `
 
