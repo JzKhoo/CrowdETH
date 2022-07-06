@@ -1,18 +1,22 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { auth, logInWithEmailAndPassword, signInWithGoogle } from "../../firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
-
 import GlobalStyle from "../../globalStyles";
-import Navbar from '../../components/Navbar/Navbar'
-import { Container, Button } from "../../globalStyles";
+import Navbar1 from '../../components/Navbar1/Navbar1'
 import { LoginWrapper,
-  LoginColumn,
   Heading,
   Subtitle,
   Form,
-  FormInput
+  FormLabel,
+  FormInput,
+  FormButton,
+  Text
 } from "./Login.styles";
+import Footer1 from '../../components/Footer1/Footer1'
+
+
+// Backend
+import { Link, useNavigate } from "react-router-dom";
+import { auth, logInWithEmailAndPassword, signInWithGoogle } from "../../firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 import IconButton from "@material-ui/core/IconButton";
 import InputLabel from "@material-ui/core/InputLabel";
@@ -23,6 +27,7 @@ import Input from "@material-ui/core/Input";
 
 const Login = () => {
 
+  // Backend
   const [values, setValues] = React.useState({
     password: "",
     showPassword: false,
@@ -56,34 +61,34 @@ const Login = () => {
   return (
     <>
       <GlobalStyle />
-      <Navbar />
+      <Navbar1 />
       <LoginWrapper>
-        <Container>
-          <LoginColumn>
-            <Heading>Login</Heading>
-            <Subtitle>Start your venture journey with us!</Subtitle>
-            <Form>
-              <FormInput value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Username' />
-              <FormInput 
-                type={values.showPassword ? "text" : "password"} 
-                value={password} onChange={(e) => setPassword(e.target.value)} 
-                placeholder='Password'
-                endAdornment={
-                  <InputAdornment position="end">
-                    <IconButton
-                      onClick={handleClickShowPassword}
-                      onMouseDown={handleMouseDownPassword}
-                    >
-                      {values.showPassword ? <Visibility /> : <VisibilityOff />}
-                    </IconButton>
-                  </InputAdornment>
-                  }
-                />
-              <Button onClick={() => logInWithEmailAndPassword(email, password)}>Venture In!</Button>
-            </Form>
-          </LoginColumn>
-        </Container>
+        <Form>
+          <Heading>Login</Heading>
+          <Subtitle>Start your venture journey with us!</Subtitle>
+          <FormLabel htmlFor='for'>Email</FormLabel>
+          <FormInput value={email} onChange={(e) => setEmail(e.target.value)} required />
+          <FormLabel htmlFor='for'>Password</FormLabel>
+          <FormInput 
+            type={values.showPassword ? "text" : "password"} 
+            value={password} onChange={(e) => setPassword(e.target.value)} 
+            required
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                >
+                  {values.showPassword ? <Visibility /> : <VisibilityOff />}
+                </IconButton>
+              </InputAdornment>
+              }
+            />
+          <FormButton onClick={() => logInWithEmailAndPassword(email, password)}>Venture In!</FormButton>
+          <Text>Forgot Password</Text>
+        </Form>
       </LoginWrapper>
+      <Footer1 />
     </> 
   )
 }
