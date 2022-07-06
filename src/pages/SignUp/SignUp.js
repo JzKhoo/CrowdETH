@@ -1,4 +1,17 @@
 import React, { useEffect, useState } from "react";
+import GlobalStyle from "../../globalStyles";
+import Navbar1 from "../../components/Navbar1/Navbar1";
+import { SignUpWrapper,
+  Form,
+  Heading,
+  Subtitle,
+  FormLabel,
+  FormInput,
+  FormButton
+} from "./SignUp.styles";
+import Footer1 from '../../components/Footer1/Footer1'
+
+// Backend
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import {
@@ -6,17 +19,6 @@ import {
   registerWithEmailAndPassword,
   signInWithGoogle,
 } from "../../firebase";
-
-import GlobalStyle from "../../globalStyles";
-import Navbar from '../../components/Navbar/Navbar'
-import { Container, Button } from "../../globalStyles";
-import { SignUpWrapper,
-  SignUpColumn,
-  Heading,
-  Subtitle,
-  Form,
-  FormInput
-} from "./SignUp.styles";
 
 function SignUp() {
   const [email, setEmail] = useState("");
@@ -37,20 +39,19 @@ function SignUp() {
   return (
     <>
       <GlobalStyle />
-      <Navbar />
+      <Navbar1 />
       <SignUpWrapper>
-        <Container>
-          <SignUpColumn>
-            <Heading>Sign Up</Heading>
-            <Subtitle>Join up in empowering ventures!</Subtitle>
-            <Form>
-              <FormInput value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Username' />
-              <FormInput value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Password' />
-              <Button onClick={register}>Venture Now!</Button>
-            </Form>
-          </SignUpColumn>
-        </Container>
+        <Form>
+          <Heading>Sign Up</Heading>
+          <Subtitle>Join up in empowering ventures!</Subtitle>
+          <FormLabel htmlFor='for'>Email</FormLabel>
+          <FormInput value={email} onChange={(e) => setEmail(e.target.value)} />
+          <FormLabel htmlFor='for'>Password</FormLabel>
+          <FormInput value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Password' />
+          <FormButton onClick={register}>Venture Now!</FormButton>
+        </Form>
       </SignUpWrapper>
+      <Footer1 />
     </>
   )
 }
