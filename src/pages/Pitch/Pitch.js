@@ -1,6 +1,6 @@
 import React from 'react';
 import GlobalStyle from '../../globalStyles';
-import Navbar2 from '../../components/Navbar2/Navbar2';
+import Navbar3 from '../../components/Navbar3/Navbar3';
 import { Container, Button } from '../../globalStyles';
 import {
   PitchWrapper,
@@ -39,7 +39,7 @@ function Pitch() {
       <AccountContextProvider>
         <ModalContextProvider>
           <GlobalStyle />
-          <Navbar2 />
+          <Navbar3 />
           <PitchWrapper>
             <Container>
               <PitchColumn>

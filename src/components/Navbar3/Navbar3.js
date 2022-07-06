@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons";
-import { animateScroll as scroll } from 'react-scroll'
 import { Button } from "../../globalStyles";
 import { Nav,
    NavBarContainer,
@@ -13,7 +12,7 @@ import { Nav,
    NavLinks,
    NavItemBtn,
    NavBtnLink
-} from "./Navbar2.styles";
+} from "./Navbar3.styles";
 import Logo from '../../images/Logo1.png'
 
 // Backend
@@ -21,7 +20,7 @@ import { useNavigate } from "react-router-dom";
 import { auth, db, logout } from "../../firebase";
 import ConnectWallet from "../Wallet/ConnectWallet";
 
-function Navbar2() {
+function Navbar3() {
 
   const navigate = useNavigate();
 
@@ -45,16 +44,12 @@ function Navbar2() {
 
   window.addEventListener('resize', showButton);
 
-  const toggleHome = () => {
-    scroll.scrollToTop();
-  }
-
   return (
     <>
     <IconContext.Provider value={{color: '#fff'}}>
       <Nav>
         <NavBarContainer>
-          <NavLogo to='/Landing' onClick={toggleHome}>
+          <NavLogo to='/Landing'>
             <NavIcon src={Logo} />
           </NavLogo>
 
@@ -64,12 +59,12 @@ function Navbar2() {
 
           <NavMenu onClick={handleClick} click={click}>
             <NavItem>
-              <NavLinks to='Explore' onClick={handleClick} smooth={true} duration={500} spy={true} exact='true' offset={-80}>
+              <NavLinks to='/Explore'>
                 Explore
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='Pitch' onClick={handleClick} smooth={true} duration={500} spy={true} exact='true' offset={-80}>
+              <NavLinks to='/Pitch'>
                 Pitch
               </NavLinks>
             </NavItem>
@@ -96,4 +91,4 @@ function Navbar2() {
   )
 }
 
-export default Navbar2
+export default Navbar3

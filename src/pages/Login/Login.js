@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import GlobalStyle from "../../globalStyles";
+import ScrollToTop from "../../ScrollToTop";
 import Navbar1 from '../../components/Navbar1/Navbar1'
 import { LoginWrapper,
   Heading,
@@ -61,6 +62,7 @@ const Login = () => {
   return (
     <>
       <GlobalStyle />
+      <ScrollToTop />
       <Navbar1 />
       <LoginWrapper>
         <Form>

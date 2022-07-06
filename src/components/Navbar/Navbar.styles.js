@@ -124,7 +124,7 @@ export const NavItemBtn = styled.li`
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        width: 35%;
         height: 120px;
     }
 `

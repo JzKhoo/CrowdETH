@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import { Container } from "../../globalStyles"
 import { Link } from "react-router-dom"
-import { Link as LinkS } from 'react-scroll'
 
 export const Nav = styled.nav`
     background: #30362F;
@@ -89,7 +88,7 @@ export const NavItem = styled.li`
     }
 `
 
-export const NavLinks = styled(LinkS)`
+export const NavLinks = styled(Link)`
     color: white;
     display: flex;
     align-items: center;
@@ -98,9 +97,9 @@ export const NavLinks = styled(LinkS)`
     height: 100%;
     cursor: pointer;
 
-    &.active {
+    /* &.active {
         border-bottom: 2px solid #4b59f7;
-    }
+    } */
 
     @media screen and (max-width: 768px) {
         text-align: center;
@@ -113,9 +112,9 @@ export const NavLinks = styled(LinkS)`
             transition: all 0.3s ease;
         }
 
-        &.active {
+        /* &.active {
             border-bottom: none;
-        }
+        } */
     }
 `
 

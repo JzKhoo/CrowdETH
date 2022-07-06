@@ -1,4 +1,5 @@
 export const homeObjOne = {
+    id: 'Explore',
     lightBg: false,
     primary: true,
     imgStart: '', 
@@ -16,6 +17,7 @@ export const homeObjOne = {
 }
 
 export const homeObjTwo = {
+    id: 'Pitch',
     lightBg: true,
     primary: false,
     imgStart: 'start', 

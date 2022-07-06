@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { IconContext } from 'react-icons/lib'
 import { animateScroll as scroll } from 'react-scroll'
@@ -12,7 +12,8 @@ import { Nav,
    NavItem,
    NavLinks,
    NavItemBtn,
-   NavBtnLink} from './Navbar.styles'
+   NavBtnLink
+} from './Navbar.styles'
 import Logo from '../../images/Logo1.png'
 
 function Navbar() {
