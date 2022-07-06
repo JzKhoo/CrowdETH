@@ -39,9 +39,11 @@ const InfoSection = ({
                 <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
-                <Button to={link} big fontBig primary={primary} smooth={true} duration={500} spy={true} exact='true' offset={-80}>
-                  {buttonLabel}
-                </Button>
+                <Link to={link}>
+                  <Button big fontBig primary={primary} smooth={true} duration={500} spy={true} exact='true' offset={-80}>
+                    {buttonLabel}
+                  </Button>
+                </Link>
               </TextWrapper>
             </InfoColumn>
             <InfoColumn>

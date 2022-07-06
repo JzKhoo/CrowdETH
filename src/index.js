@@ -17,7 +17,7 @@ root.render(
         <Routes>
             <Route path='/' element={<App />} />
             <Route path='Login' element={<Login />} />
-            <Route path="SignUp" element={<SignUp />} />
+            <Route path='SignUp' element={<SignUp />} />
             <Route path='Landing' element={<Landing />} />
             <Route path='Explore' element={<Explore />} />
             <Route path='Pitch' element={<Pitch />} />

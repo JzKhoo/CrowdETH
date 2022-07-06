@@ -13,7 +13,7 @@ export const homeObjOne = {
     img: require('../../images/Logo.gif'),
     alt: 'Image',
     start: '',
-    link: '/'
+    link: '/SignUp'
 }
 
 export const homeObjTwo = {

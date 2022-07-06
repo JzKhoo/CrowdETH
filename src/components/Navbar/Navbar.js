@@ -54,17 +54,17 @@ function Navbar() {
 
           <NavMenu onClick={handleClick} click={click}>
             <NavItem>
-              <NavLinks to='GetStarted' smooth={true} duration={500} spy={true} exact='true' offset={-80}>
+              <NavLinks to='GetStarted' onClick={handleClick} smooth={true} duration={500} spy={true} exact='true' offset={-80}>
                 Get Started
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='AboutUs' smooth={true} duration={500} spy={true} exact='true' offset={-80}>
+              <NavLinks to='AboutUs' onClick={handleClick} smooth={true} duration={500} spy={true} exact='true' offset={-80}>
                 About Us
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='OurFeatures' smooth={true} duration={500} spy={true} exact='true' offset={-80}>
+              <NavLinks to='OurFeatures' onClick={handleClick} smooth={true} duration={500} spy={true} exact='true' offset={-80}>
                 Our Features
               </NavLinks>
             </NavItem>
