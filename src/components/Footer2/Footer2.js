@@ -1,3 +1,5 @@
+// Footer for Pitch,js, Explore.js - Link to Landing,js
+
 import React from 'react'
 import { animateScroll as scroll } from 'react-scroll'
 import { FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaLinkedin } from 'react-icons/fa' 

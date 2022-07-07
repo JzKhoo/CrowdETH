@@ -1,3 +1,5 @@
+// Footer for Login.js, SignUp.js - Link to Home.js
+
 import React from 'react'
 import { FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaLinkedin } from 'react-icons/fa' 
 import { 

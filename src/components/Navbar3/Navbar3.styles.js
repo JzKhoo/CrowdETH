@@ -123,7 +123,7 @@ export const NavItemBtn = styled.li`
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 35%;
+        width: 30%;
         height: 120px;
     }
 `

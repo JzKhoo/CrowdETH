@@ -45,11 +45,11 @@ function SignUp() {
       <SignUpWrapper>
         <Form>
           <Heading>Sign Up</Heading>
-          <Subtitle>Join up in empowering ventures!</Subtitle>
+          <Subtitle>Join us in empowering ventures!</Subtitle>
           <FormLabel htmlFor='for'>Email</FormLabel>
           <FormInput value={email} onChange={(e) => setEmail(e.target.value)} />
           <FormLabel htmlFor='for'>Password</FormLabel>
-          <FormInput value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Password' />
+          <FormInput value={password} onChange={(e) => setPassword(e.target.value)} />
           <FormButton onClick={register}>Venture Now!</FormButton>
         </Form>
       </SignUpWrapper>

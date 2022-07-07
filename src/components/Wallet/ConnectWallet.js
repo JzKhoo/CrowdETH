@@ -5,18 +5,21 @@ import { ModalContext } from "../Contexts/ModalContext";
 
 
 const ConnectWalletButton = styled.button`
-    background-color: white;
-    text-decoration: none;
-    color: #11B6CC;
-    box-sizing: border-box;
-    width: 140px;
-    height: 40px;
-    margin: 10px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 4px;
+    background-color: #4b59f7;
+    white-space: nowrap;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    outline: none;
     border: none;
+    cursor: pointer;
+
+    &:hover {
+        transition: all 0.3s ease-out;
+        background: white;
+        background: #0467fb;
+    }
 `
 
 export default function ConnectWallet() {
@@ -78,7 +81,7 @@ export default function ConnectWallet() {
                 onClick={!!account ? () => { } : handleConnect}
                 disabled={loading}
             >
-                <b>{!account ? "CONNECT WALLET" : truncateAddress(account)}</b>
+                <b>{!account ? "Connect Wallet" : truncateAddress(account)}</b>
             </ConnectWalletButton>
         </>
     );

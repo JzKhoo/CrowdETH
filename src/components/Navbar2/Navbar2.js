@@ -1,3 +1,5 @@
+// Navbar for Landing.js - all links & smooth scroll
+
 import React, { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons";

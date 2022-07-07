@@ -1,3 +1,5 @@
+// Footer for Home.js - Smooth Scroll
+
 import React from 'react'
 import { animateScroll as scroll } from 'react-scroll'
 import { FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaLinkedin } from 'react-icons/fa' 

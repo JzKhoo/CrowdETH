@@ -1,3 +1,5 @@
+// New Page will always load at Top
+
 import { useEffect } from "react";
 import { useLocation } from "react-router";
 

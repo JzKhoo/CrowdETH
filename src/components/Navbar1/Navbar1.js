@@ -1,5 +1,6 @@
+// Navbar for Login.js & SignUp.js - Home.js Link, no smooth scroll
+
 import React from 'react'
-import { IconContext } from 'react-icons/lib'
 import { Nav,
    NavBarContainer, 
    NavLogo, 
@@ -10,7 +11,6 @@ import Logo from '../../images/Logo1.png'
 function Navbar1() {
   return (
     <>
-    <IconContext.Provider value={{color: '#fff'}}>
       <Nav>
         <NavBarContainer>
           <NavLogo to='/'>
@@ -18,7 +18,6 @@ function Navbar1() {
           </NavLogo>
         </NavBarContainer>
       </Nav>
-    </IconContext.Provider>
     </>
   )
 }

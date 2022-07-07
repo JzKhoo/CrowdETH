@@ -24,7 +24,7 @@ export const homeObjTwo = {
     lightTopLine: false, 
     lightTextDesc: false, 
     buttonLabel: 'Pitch Now', 
-    description: 'Showcase your brilliant ideas nd win the hearts of the DeFi crowd!', 
+    description: 'Showcase your brilliant ideas and win the hearts of the DeFi crowd!', 
     headline: 'Pitch It!', 
     lightText: false, 
     topLine: 'Are you an Entrepreneur?', 

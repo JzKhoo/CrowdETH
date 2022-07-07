@@ -1,38 +1,21 @@
 import React from 'react';
 import GlobalStyle from '../../globalStyles';
 import Navbar3 from '../../components/Navbar3/Navbar3';
-import { Container, Button } from '../../globalStyles';
-import {
+import { 
   PitchWrapper,
-  PitchColumn,
+  Form,
   Heading,
   Subtitle,
-  Form,
-  PitchTitle,
-  PitchDescription,
-  UploadFile
+  FormLabel,
+  FormInput,
+  ErrorMessage,
+  FormButton
 } from './Pitch.styles';
-
-import props from 'prop-types';
 
 import { AccountContextProvider } from "../../components/Contexts/AccountContext";
 import { ModalContextProvider } from "../../components/Contexts/ModalContext";
 
 function Pitch() {
-
-  // Create a reference to the hidden file input element
-  const hiddenFileInput = React.useRef(null);
-
-  // Programmatically click the hidden file input element when the UploadButton component is clicked
-  const handleClick = event => {
-    hiddenFileInput.current.click();
-  }
-
-  // Call a function (passed as a prop from the parent component) to handle the user-selected file
-  const handleChange = event => {
-    const fileUploaded = event.targeted.files[0];
-    props.handleFile(fileUploaded);
-  }
 
   return (
     <>
@@ -41,20 +24,28 @@ function Pitch() {
           <GlobalStyle />
           <Navbar3 />
           <PitchWrapper>
-            <Container>
-              <PitchColumn>
-                <Heading>Pitch Your IdeaETH</Heading>
-                <Subtitle>Got an Idea? Pitch it now to gain the hearts of everyone!</Subtitle>
-                <Subtitle>Start your IdeaETH by filling the template below!</Subtitle>
-                <Form>
-                  <PitchTitle placeholder='Project Title'></PitchTitle>
-                  <PitchDescription placeholder='Project Description'></PitchDescription>
-                  <UploadFile onClick={handleClick}>Upload a File</UploadFile>
-                  <input type='file' ref={hiddenFileInput} onChange={handleChange} style={{ display: 'none' }} />
-                  <Button to='/Landing'>Pitch It!</Button>
-                </Form>
-              </PitchColumn>
-            </Container>
+            <Form>
+              <Heading>Pitch Your IdeaETH</Heading>
+              <Subtitle>Got an Idea? Pitch it now to gain the hearts of everyone! Start your IdeaETH by filling the template below!</Subtitle>
+              <FormLabel htmlFor='for'>Project Title</FormLabel>
+              <FormInput />
+              <FormLabel htmlFor='for'>Project Poster</FormLabel>
+              <FormInput />
+              <FormLabel htmlFor='for'>Project Description</FormLabel>
+              <FormInput />
+              <FormLabel htmlFor='for'>Project Website/Link</FormLabel>
+              <FormInput />
+              <FormLabel htmlFor='for'>Start Date</FormLabel>
+              <FormInput />
+              <FormLabel htmlFor='for'>End Date</FormLabel>
+              <FormInput />
+              <FormLabel htmlFor='for'>Amount to be Raised (ETH)</FormLabel>
+              <FormInput />
+
+              <ErrorMessage>Error message here</ErrorMessage>
+
+              <FormButton>Pitch It!</FormButton>
+            </Form>
           </PitchWrapper>
         </ModalContextProvider>
       </AccountContextProvider>
