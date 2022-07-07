@@ -10,11 +10,11 @@ import {
   FormLabel,
   FormInput,
   FormInputDescription,
-  ErrorMessage,
   FormButton
 } from './Pitch.styles';
 import Footer3 from '../../components/Footer3/Footer3'
 import UploadImg from '../../components/UploadImg/UploadImg';
+
 
 // Backend
 import { AccountContextProvider } from "../../components/Contexts/AccountContext";
@@ -42,17 +42,9 @@ function Pitch() {
               <FormInput />
               <FormLabel htmlFor='for'>Project Poster</FormLabel>
               <UploadImg />
-              
-              {/* <FormLabel htmlFor='for'>Start Date</FormLabel>
-              <FormInput />
-              <FormLabel htmlFor='for'>End Date</FormLabel>
-              <FormInput />
               <FormLabel htmlFor='for'>Amount to be Raised (ETH)</FormLabel>
               <FormInput />
-
-              <ErrorMessage>Error message here</ErrorMessage>
-
-              <FormButton>Pitch It!</FormButton> */}
+              <FormButton>Pitch It!</FormButton>
             </Form>
           </PitchWrapper>
           <Footer3 />
