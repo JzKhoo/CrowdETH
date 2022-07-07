@@ -8,7 +8,7 @@ export const PitchWrapper = styled.div`
 
 export const Form = styled.form`
     background: #101522;
-    max-width: 1000px;
+    max-width: 800px;
     height: auto;
     width: 100%;
     z-index: 1;
@@ -50,7 +50,14 @@ export const FormInput = styled.input`
     border-radius: 4px;
 `
 
-export const ErrorMessage = styled.text``
+export const FormInputDescription = styled.textarea`
+    padding: 16px 16px;
+    margin-bottom: 32px;
+    resize: none;
+    height: 200px;
+    border: none;
+    border-radius: 4px;
+`
 
 export const FormButton = styled.button`
     background: ${({primary}) => (primary ? '#0467FB' : '#4B59F7') };
