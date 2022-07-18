@@ -19,10 +19,12 @@ const deployContract = async () => {
     const accounts = await web3.eth.getAccounts();
 
     console.log('Attempting to deploy from account', accounts[0]);
+    const gas = { gas: 1000000, gasPrice: "30000000000" };
+    web3.eth.transactionBlockTimeout = 100;
 
     const ventureContractFactory = await new web3.eth.Contract(VentureContractFactory.abi)
         .deploy({ data: VentureContractFactory.evm.bytecode.object })
-        .send({ gas: '10000000', from: accounts[0] });
+        .send({ from: accounts[0], ...gas });
     
     const ventureContractFactoryAddress = ventureContractFactory.options.address;
     console.log('Contract deployed to', ventureContractFactoryAddress);

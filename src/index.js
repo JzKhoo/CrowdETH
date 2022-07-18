@@ -9,6 +9,7 @@ import Explore from './pages/Explore/Explore'
 import Pitch from './pages/Pitch/Pitch'
 import AboutUs from "./pages/AboutUs/AboutUs";
 
+
 const root = ReactDOM.createRoot(
     document.getElementById("root")
 )

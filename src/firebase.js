@@ -1,4 +1,5 @@
 import * as firebase from './firebase';
+import { getStorage, ref } from "firebase/storage";
 import { initializeApp } from "firebase/app";
 import {
   GoogleAuthProvider,
@@ -30,6 +31,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
+const storage = getStorage(app);
 const googleProvider = new GoogleAuthProvider();
 const signInWithGoogle = async () => {
   try {
@@ -88,6 +90,7 @@ const logout = () => {
 export {
   auth,
   db,
+  storage,
   signInWithGoogle,
   logInWithEmailAndPassword,
   registerWithEmailAndPassword,
