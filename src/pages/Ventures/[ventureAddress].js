@@ -1,5 +1,5 @@
 import React from "react";
-import { AccountContext } from "../components/Contexts/AccountContext";
+import { AccountContext } from "../../components/Contexts/AccountContext";
 import { useRouter } from 'next/router';
 
 function Venture() {
@@ -26,7 +26,7 @@ const account = React.useContext(AccountContext);
     try {
       setLoading(true);
       const ventureDetails = await fetch(
-        `/api/ventures/${ventureAddress}`
+        `/../api/ventures/${ventureAddress}`
       ).then((res) => res.json());
       setVentureInformation({ ventureAddress, ...ventureInformation });
     } catch (err) {

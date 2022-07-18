@@ -1,5 +1,6 @@
 import { Venture } from "../../../../smart_contract/contracts";
 import { db } from "../../../firebase";
+import { doc, getDoc, setDoc } from "firebase/firestore";
 
 export default async (req, res) => {
   const ventureAddress = req.query.ventureAddress;
@@ -21,18 +22,15 @@ export default async (req, res) => {
       venturerAddress,
       listingTimestamp,
       targetAmount,
-    } = await db
-      .collection("ventures")
-      .doc(ventureAddress)
-      .get()
+    } = await getDoc(doc(db, "ventures", ventureAddress))
       .then((doc) => {
-        if (doc.exists) {
+        if (doc.exists()) {
           return doc.data();
         } else {
           throw new Error("Venture does not exist");
         }
       });
-
+    
     const result = {
       name,
       symbol,

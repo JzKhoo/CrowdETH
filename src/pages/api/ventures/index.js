@@ -1,11 +1,11 @@
 import { db } from "../../../firebase";
+import { get } from "firebase/database";
+import { getDocs, collection, query, setDoc } from "firebase/firestore";
 
 export default async (req, res) => {
   if (req.method === "GET") {
     try {
-      const ventureSummaries = await db
-        .collection("ventures")
-        .get()
+      const ventureSummaries = await getDocs(query(collection(db, "ventures")))
         .then((querySnapshot) => {
           const results = [];
           querySnapshot.forEach((doc) => {
@@ -37,7 +37,7 @@ export default async (req, res) => {
 
       console.log("POST /ventures => ", req.body);
 
-      await db.collection("ventures").doc(ventureAddress).set({
+      await setDoc(doc(db, "ventures", ventureAddress), {
         name,
         symbol,
         description,
@@ -46,6 +46,7 @@ export default async (req, res) => {
         listingTimestamp,
         targetCapital,
       });
+
       return res.status(200).json({});
     } catch (err) {
       console.error(err.message);

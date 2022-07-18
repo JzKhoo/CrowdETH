@@ -8,6 +8,7 @@ import Landing from "./pages/Landing/Landing";
 import Explore from './pages/Explore/Explore'
 import Pitch from './pages/Pitch/Pitch'
 
+
 const root = ReactDOM.createRoot(
     document.getElementById("root")
 )
