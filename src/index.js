@@ -7,6 +7,7 @@ import SignUp from "./pages/SignUp/SignUp";
 import Landing from "./pages/Landing/Landing";
 import Explore from './pages/Explore/Explore'
 import Pitch from './pages/Pitch/Pitch'
+import AboutUs from "./pages/AboutUs/AboutUs";
 
 const root = ReactDOM.createRoot(
     document.getElementById("root")
@@ -21,6 +22,7 @@ root.render(
             <Route path='Landing' element={<Landing />} />
             <Route path='Explore' element={<Explore />} />
             <Route path='Pitch' element={<Pitch />} />
+            <Route path='AboutUs' element={<AboutUs />} />
         </Routes>
     </BrowserRouter>
 )
