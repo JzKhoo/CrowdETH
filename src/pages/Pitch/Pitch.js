@@ -37,7 +37,7 @@ function Pitch() {
   const [image, setImage] = useState('')
   const [isUploaded, setIsUploaded] = useState('')
 
-  // Function to handle Image submisison
+  // Function to handle Image submission
   function handleImageChange(e) {
       if (e.target.files && e.target.files[0]) {
           let reader = new FileReader()

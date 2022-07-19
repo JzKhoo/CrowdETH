@@ -25,38 +25,17 @@ const Footer1 = () => {
             <FooterLinksContainer>
                 <FooterLinksWrapper>
                     <FooterLinkItems>
-                        <FooterLinkTitle>About Us</FooterLinkTitle>
-                        <FooterLink to=''>Our Features</FooterLink>
-                        <FooterLink to=''>Testimonials</FooterLink>
-                        <FooterLink to=''>Careers</FooterLink>
-                        <FooterLink to=''>Investors</FooterLink>
-                        <FooterLink to=''>Terms of Service</FooterLink>          
+                        <FooterLinkTitle>Quick Links</FooterLinkTitle>
+                        <FooterLink to='/Login'>Login</FooterLink>
+                        <FooterLink to='/SignUp'>Sign Up</FooterLink>
+                        <FooterLink to='/AboutUs'>About Us</FooterLink>
+                        <FooterLink to='/OurFeatures'>Our Features</FooterLink>        
                     </FooterLinkItems>
                     <FooterLinkItems>
-                        <FooterLinkTitle>About Us</FooterLinkTitle>
-                        <FooterLink to=''>Our Features</FooterLink>
-                        <FooterLink to=''>Testimonials</FooterLink>
-                        <FooterLink to=''>Careers</FooterLink>
-                        <FooterLink to=''>Investors</FooterLink>
-                        <FooterLink to=''>Terms of Service</FooterLink>          
-                    </FooterLinkItems>
-                </FooterLinksWrapper>
-                <FooterLinksWrapper>
-                    <FooterLinkItems>
-                        <FooterLinkTitle>About Us</FooterLinkTitle>
-                        <FooterLink to=''>Our Features</FooterLink>
-                        <FooterLink to=''>Testimonials</FooterLink>
-                        <FooterLink to=''>Careers</FooterLink>
-                        <FooterLink to=''>Investors</FooterLink>
-                        <FooterLink to=''>Terms of Service</FooterLink>          
-                    </FooterLinkItems>
-                    <FooterLinkItems>
-                        <FooterLinkTitle>About Us</FooterLinkTitle>
-                        <FooterLink to=''>Our Features</FooterLink>
-                        <FooterLink to=''>Testimonials</FooterLink>
-                        <FooterLink to=''>Careers</FooterLink>
-                        <FooterLink to=''>Investors</FooterLink>
-                        <FooterLink to=''>Terms of Service</FooterLink>          
+                        <FooterLinkTitle>Find Out More</FooterLinkTitle>
+                        <FooterLink to=''>GitHub</FooterLink>
+                        <FooterLink to=''>Poster</FooterLink>
+                        <FooterLink to=''>Video</FooterLink>      
                     </FooterLinkItems>
                 </FooterLinksWrapper>
             </FooterLinksContainer>
