@@ -6,22 +6,26 @@ export const VentureWrapper = styled.div`
 `
 
 export const VentureContainer = styled.div`
+    display: flex;
+`
+
+export const VentureInformation = styled.div`
     background: #101522;
     max-width: 800px;
     height: auto;
     width: 100%;
     z-index: 1;
-    display: flex;
+    display: grid;
     margin: 0 auto;
     padding: 80px 32px;
-`
 
-export const VentureInformation = styled.div`
-    display: grid;
+    @media screen and (max-width: 400px) {
+        padding: 32px 32px;
+    }
 `
 
 export const Heading = styled.h1`
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     font-size: 48px;
     line-height: 1.1;
     color: #f7f8fa;
@@ -29,23 +33,40 @@ export const Heading = styled.h1`
 `
 
 export const Poster = styled.img`
+    margin-bottom: 32px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 `
 
 export const Description = styled.h1`
-    margin-bottom: 40px;
+    margin-bottom: 32px;
+    margin-top: 32px;
     color: #a9b3c1;
     font-size: 20px;
     font-weight: 400;
     text-align: center;
 `
 
+export const KeyValueContainer = styled.div`
+    display: flex;
+    margin-bottom: 32px;
+`
+
 export const VentureLabel = styled.p`
-    margin-bottom: 8px;
     font-size: 14px;
     color: white;
+    margin-right: 8px;
 `
 
 export const VentureLink = styled.a`
-    color: #1c2237;
+    color: #a9b3c1;
     font-size: 14px;
+    text-decoration: none;
+`
+
+export const VentureNumber = styled.p`
+    font-size: 14px;
+    color: #a9b3c1;
 `
