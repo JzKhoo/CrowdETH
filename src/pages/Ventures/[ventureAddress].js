@@ -15,6 +15,7 @@ import {
   VentureLink,
   VentureNumber
 } from "./Ventures.styles";
+import InvestorForm from "../../components/InvestorForm/InvestorForm";
 import Footer3 from "../../components/Footer3/Footer3";
 
 // Testing
@@ -114,6 +115,7 @@ const Venture = () => {
                   <VentureNumber>{sharesOutstanding}</VentureNumber>
                 </KeyValueContainer>
               </VentureInformation>
+              <InvestorForm />
             </VentureContainer>
           </VentureWrapper>
           <Footer3 />
