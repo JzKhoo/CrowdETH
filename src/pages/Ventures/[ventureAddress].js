@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import GlobalStyle from "../../globalStyles";
 import ScrollToTop from "../../ScrollToTop";
 import Navbar3 from "../../components/Navbar3/Navbar3";
@@ -24,10 +24,13 @@ import TestImage from '../../images/Pitch.png'
 // Backend
 import { AccountContext, AccountContextProvider } from "../../components/Contexts/AccountContext";
 import { ModalContextProvider } from "../../components/Contexts/ModalContext";
+import { Venture } from "smart_contract/contracts";
+import { db } from "../../firebase";
+import { doc, getDoc, setDoc } from "firebase/firestore";
 
-const Venture = () => {
+const VentureAdd = () => {
 
-  const [searchParams, setSearchParams] = useSearchParams();
+  const location = useLocation().pathname.split("/").pop();
 
   const account = React.useContext(AccountContext);
   const [ventureInformation, setVentureInformation] = React.useState({
@@ -52,10 +55,43 @@ const Venture = () => {
   const fetchVentureInformation = async (ventureAddress) => {
     try {
       setLoading(true);
-      const ventureDetails = await fetch(
-        `/../api/ventures/${ventureAddress}`
-      ).then((res) => res.json());
-      setVentureInformation({ ventureAddress, ...ventureInformation });
+
+      const ventureContract = Venture(ventureAddress);
+      const ventureInformation = await ventureContract.methods
+        .getVentureInformation()
+        .call();
+  
+      const {
+        name,
+        symbol,
+        description,
+        imageUrl,
+        venturerAddress,
+        listingTimestamp,
+        targetCapital,
+      } = await getDoc(doc(db, "ventures", ventureAddress))
+        .then((doc) => {
+          if (doc.exists()) {
+            return doc.data();
+          } else {
+            throw new Error("Venture does not exist");
+          }
+        });
+      
+      const result = {
+        name,
+        symbol,
+        description,
+        imageUrl,
+        ventureAddress,
+        listingTimestamp,
+        venturerAddress,
+        targetCapital,
+        sharesOutstanding: parseInt(ventureInformation[2]),
+        balance: parseInt(ventureInformation[5]),
+        status: parseInt(ventureInformation[7]),
+      };
+      setVentureInformation({ ventureAddress, ...result });
     } catch (err) {
       console.error(err.message);
       setError(true);
@@ -66,9 +102,9 @@ const Venture = () => {
 
 
   React.useEffect(() => {
-    const ventureAddress = searchParams.get(ventureAddress);
-    ventureAddress && fetchVentureInformation(ventureAddress);
-  }, [searchParams, refreshData]); // refresh data when changes made
+    const ventureAddress = location;
+    fetchVentureInformation(ventureAddress);
+  }, [location, refreshData]); // refresh data when changes made
 
   // Data to be shown on page
   const {
@@ -125,4 +161,4 @@ const Venture = () => {
   )
 }
 
-export default Venture
+export default VentureAdd

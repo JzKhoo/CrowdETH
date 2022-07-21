@@ -8,7 +8,7 @@ import Landing from "./pages/Landing/Landing";
 import Explore from './pages/Explore/Explore'
 import Pitch from './pages/Pitch/Pitch'
 import AboutUs from "./pages/AboutUs/AboutUs";
-import Venture from "./pages/Ventures/[ventureAddress]";
+import VentureAdd from "./pages/Ventures/[ventureAddress]";
 
 
 const root = ReactDOM.createRoot(
@@ -25,7 +25,7 @@ root.render(
             <Route path='Explore' element={<Explore />} />
             <Route path='Pitch' element={<Pitch />} />
             <Route path='AboutUs' element={<AboutUs />} />
-            <Route path='Ventures/:ventureAddress' element={<Venture />} />
+            <Route path='Ventures/:ventureAddress' element={<VentureAdd />} />
         </Routes>
     </BrowserRouter>
 )

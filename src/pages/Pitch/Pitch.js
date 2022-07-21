@@ -25,7 +25,8 @@ import UploadImg from '../../components/UploadImg/UploadImg';
 import { VentureContractFactory } from "smart_contract/contracts";
 import Web3 from 'web3';
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { storage } from "../../firebase";
+import { db, storage } from "../../firebase";
+import { getDocs, collection, query, setDoc, doc } from "firebase/firestore";
 import { AccountContext, AccountContextProvider } from "../../components/Contexts/AccountContext";
 import { ModalContext, ModalContextProvider } from "../../components/Contexts/ModalContext";
 
@@ -90,48 +91,69 @@ function Pitch() {
 
         // Create Child Reference
         const storageRef = ref(storage, `images/${ventureAddress}`);
-        const uploadTask = uploadBytesResumable(storageRef, image);
+        const metadata = {
+          contentType: 'image/png',
+        };
+        const uploadTask = uploadBytesResumable(storageRef, image, metadata);
 
         uploadTask.on(
           "state_changed",
           // Next Action
           (snapshot) => {
-            console.log(snapshot);
+            const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            console.log('Upload is ' + progress + '% done');
+            switch (snapshot.state) {
+              case 'paused':
+                console.log('Upload is paused');
+                break;
+              case 'running':
+                console.log('Upload is running');
+                break;
+            }
           },
           // Error Action
           async (err) => {
-            await fetch('/../api/ventures', {
-              headers: { "Content-Type": "application/json" },
-              method: "POST",
-              body: JSON.stringify({
-                ...fields,
-                targetCapital: Web3.utils.toWei(fields.targetCapital, "ether"),
-                imageUrl: "https://d33wubrfki0l68.cloudfront.net/13ca0c32ffd56bcfaf861b9a8acb212d0f6482e3/d8df6/static/c3bcc8c47890ffd2a2c329972c73d0fd/e018d/ethereum-logo-portrait-black-gray.png",
-                venturerAddress,
-                ventureAddress,
-                listingTimestamp: parseInt(Date.now() / 1000),
-              }),
-            });
+
+            const imageUrl =  "https://d33wubrfki0l68.cloudfront.net/13ca0c32ffd56bcfaf861b9a8acb212d0f6482e3/d8df6/static/c3bcc8c47890ffd2a2c329972c73d0fd/e018d/ethereum-logo-portrait-black-gray.png";
+            const name = fields.name;
+            const symbol = fields.symbol;
+            const description = fields.description;
+            const listingTimestamp = parseInt(Date.now() / 1000);
+            const targetCapital = fields.targetCapital;
+
+            await setDoc(doc(db, "ventures", ventureAddress), {
+              name,
+              symbol,
+              description,
+              imageUrl,
+              venturerAddress,
+              listingTimestamp,
+              targetCapital,
+            }); 
 
             navigate(`../Ventures/${ventureAddress}`);
             console.log("pushed ROUTE with ERR");
           },
           // Complete Action
           async () => {
+
             const imageUrl = await getDownloadURL(uploadTask.snapshot.ref);
-            console.log(imageUrl);
-            await fetch('/../api/ventures', {
-              headers: { "Content-Type": "application/json" },
-              method: "POST",
-              body: JSON.stringify({
-                ...fields,
-                targetCapital: Web3.utils.toWei(fields.targetCapital, "ether"),
-                imageUrl: imageUrl,
-                venturerAddress,
-                ventureAddress,
-                listingTimestamp: parseInt(Date.now() / 1000),
-              }),
+            const name = fields.name;
+            const symbol = fields.symbol;
+            const description = fields.description;
+            const listingTimestamp = parseInt(Date.now() / 1000);
+            const targetCapital = fields.targetCapital;
+
+            await setDoc(doc(db, "ventures", ventureAddress), {
+              name,
+              symbol,
+              description,
+              imageUrl,
+              venturerAddress,
+              listingTimestamp,
+              targetCapital,
             });
+
             navigate(`../Ventures/${ventureAddress}`);
             console.log("pushed ROUTE");
           });
