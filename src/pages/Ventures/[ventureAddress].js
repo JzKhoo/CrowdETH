@@ -151,7 +151,10 @@ const VentureAdd = () => {
                   <VentureNumber>{sharesOutstanding}</VentureNumber>
                 </KeyValueContainer>
               </VentureInformation>
-              <InvestorForm />
+              <InvestorForm 
+                {...ventureInformation}
+                toggleRefreshData={toggleRefreshData} 
+              />
             </VentureContainer>
           </VentureWrapper>
           <Footer3 />
