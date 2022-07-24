@@ -38,19 +38,19 @@ function Pitch() {
   const [image, setImage] = useState('')
   const [isUploaded, setIsUploaded] = useState('')
 
-  // Function to handle Image submission
-  function handleImageChange(e) {
-      if (e.target.files && e.target.files[0]) {
-          let reader = new FileReader()
+  // // Function to handle Image submission
+  // function handleImageChange(e) {
+  //     if (e.target.files && e.target.files[0]) {
+  //         let reader = new FileReader()
 
-          reader.onload = function(e) {
-              setImage(e.target.result)
-              setIsUploaded(true)
-          }
+  //         reader.onload = function(e) {
+  //             setImage(e.target.result)
+  //             setIsUploaded(true)
+  //         }
 
-          reader.readAsDataURL(e.target.files[0])
-      }
-  }
+  //         reader.readAsDataURL(e.target.files[0])
+  //     }
+  // }
 
   const [fields, setFields] = useState({
     name: "",
@@ -91,10 +91,7 @@ function Pitch() {
 
         // Create Child Reference
         const storageRef = ref(storage, `images/${ventureAddress}`);
-        const metadata = {
-          contentType: 'image/png',
-        };
-        const uploadTask = uploadBytesResumable(storageRef, image, metadata);
+        const uploadTask = uploadBytesResumable(storageRef, image);
 
         uploadTask.on(
           "state_changed",
@@ -216,7 +213,11 @@ function Pitch() {
                             id='upload-input'
                             type='file'
                             accept='.jpg, .jpeg, .gif, .png, .mov, .mp4'
-                            onChange={handleImageChange}
+                            //onChange={handleImageChange}
+                            onChange={(event) => {
+                              setImage(event.target.files[0]);
+                              setIsUploaded(true);
+                            }}
                           />
                         </>
                       ) : (

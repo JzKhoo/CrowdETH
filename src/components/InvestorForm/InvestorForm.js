@@ -61,6 +61,7 @@ export default function InvestorForm({
     );
 
     const days = daysLeft(listingTimestamp);
+    const displayBalance = Web3.utils.fromWei(Web3.utils.toBN(balance));
 
     return (
         <>
