@@ -27,7 +27,7 @@ const Footer3 = () => {
                     <FooterLinkItems>
                         <FooterLinkTitle>Quick Links</FooterLinkTitle>
                         <FooterLink to='/Explore'>Explore</FooterLink>
-                        <FooterLink to='/Pitch'>Sign Up</FooterLink>      
+                        <FooterLink to='/Pitch'>Pitch</FooterLink>      
                     </FooterLinkItems>
                     <FooterLinkItems>
                         <FooterLinkTitle>Find Out More</FooterLinkTitle>

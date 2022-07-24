@@ -1,15 +1,13 @@
 import styled from "styled-components";
 
 export const VentureWrapper = styled.div`
-    padding: 160px 0;
+    padding: 80px 0;
     background: #101522;
 `
 
 export const VentureContainer = styled.div`
     display: flex;
-    margin: 0 -15px -15px -15px;
     flex-wrap: wrap;
-    align-items: center;
 
     @media screen and (max-width: 768px) {
         max-width: 100%;
@@ -29,7 +27,7 @@ export const VentureInformation = styled.div`
     margin: 0 auto;
     padding: 80px 32px;
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 768px) {
         padding: 32px 32px;
     }
 `

@@ -1,15 +1,17 @@
 import styled from "styled-components"
 
 export const InvestorFormWrapper = styled.div`
-    padding: 160px 32px;
+    padding: 32px;
     background-color: #101522;
+`
+
+export const FillerContainer = styled.div`
+    padding: 80px;
     position: sticky;
-    top: 0;
 `
 
 export const InvestorFormContainer = styled.div`
     background: white;
-    opacity: 80%;
     max-width: 400px;
     height: auto;
     width: 100%;
@@ -18,10 +20,6 @@ export const InvestorFormContainer = styled.div`
     margin: 0 auto;
     padding: 32px 32px;
     border-radius: 4px;
-
-    @media screen and (max-width: 400px) {
-        padding: 32px 32px;
-    }
 `
 
 export const LargeLabel = styled.h1`

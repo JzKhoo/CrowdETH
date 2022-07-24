@@ -3,6 +3,7 @@ import GlobalStyle from '../../globalStyles'
 import { 
     InvestorFormWrapper,
     InvestorFormContainer,
+    FillerContainer,
     LargeLabel,
     SmallLabel,
     ProgressBar,
@@ -16,6 +17,7 @@ const InvestorForm = () => {
     <>
         <GlobalStyle />
         <InvestorFormWrapper>
+            <FillerContainer></FillerContainer>
             <InvestorFormContainer>
                 <LargeLabel>6.31</LargeLabel>
                 <SmallLabel>of 10.00 ETH pledged</SmallLabel>

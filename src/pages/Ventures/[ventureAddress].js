@@ -34,14 +34,14 @@ const VentureAdd = () => {
 
   const account = React.useContext(AccountContext);
   const [ventureInformation, setVentureInformation] = React.useState({
-    name: "CrowdETH",
-    symbol: "#$%^",
+    name: "",
+    symbol: "",
     sharesOutstanding: 10,
     balance: 20,
-    venturerAddress: "CrowdETHAdminWebsite",
-    listingTimestamp: "20/7/2022",
-    description: "Hi this is an Orbital Project",
-    ventureAddress: "CrowdETHUserWebsite",
+    venturerAddress: "",
+    listingTimestamp: "",
+    description: "",
+    ventureAddress: "",
     imageUrl: TestImage
   });
   const [error, setError] = React.useState(false);
